@@ -1,0 +1,183 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* Dark-mode steps of the validated categorical palette -- this app is
+     currently dark-only (see App.css history), so only the dark column is
+     wired. Add the light column + prefers-color-scheme if a theme toggle
+     is ever added. */
+  --viz-surface: #1a1a19;
+  --viz-text-secondary: #c3c2b7;
+}
+
+.app-header {
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  color: #646cff;
+  margin-bottom: 0.5rem;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+
+.features ul {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.features li {
+  margin: 0.5rem 0;
+}
+
+.actions {
+  margin-top: 2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: #646cff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #646cff;
+  border: 1px solid #646cff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background: #535bf2;
+}
+
+.btn-secondary:hover {
+  background: #646cff;
+  color: white;
+}
+
+.viz-surface {
+  background: var(--viz-surface);
+}
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.breakdown-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--viz-text-secondary);
+  font-size: 0.85rem;
+}
+
+.breakdown-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.largest {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.largest-table {
+  flex: 1 1 320px;
+  min-width: 280px;
+}
+
+.largest-table h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  color: var(--viz-text-secondary);
+}
+
+.largest-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.largest-table tr + tr {
+  border-top: 1px solid #2c2c2a;
+}
+
+.largest-table td {
+  padding: 0.35rem 0;
+}
+
+.largest-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 0;
+  width: 100%;
+}
+
+.largest-size {
+  padding-left: 1rem;
+  text-align: right;
+  white-space: nowrap;
+  color: var(--viz-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.largest-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.app-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  color: #888;
+}
